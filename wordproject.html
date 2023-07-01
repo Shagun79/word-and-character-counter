@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Word Project</title>
+</head>  
+
+         <style>
+             body{
+                background-color: darkcyan;
+             }
+              
+             .box{
+                width: 700px;
+                 height:300px;
+                  background-color: rgb(81, 155, 155);
+                 margin-left: 200px;
+                 margin-top: 100px;
+                 border: 1px solid white;
+             }
+             input{
+                background-color: white;
+                  width: 400px;
+                   height: 50px;
+                    
+                
+                  border: none;
+             }
+             .main{
+                  text-align: center;
+                   padding-top: 40px;
+                   margin-left: 20px;
+             
+                   
+             }
+             button{
+                color: white;
+                background-color: black;
+                border-radius: 20px;
+                padding: 10px 20px;
+                 
+             }
+             h2{
+                text-align: center;
+             }
+             h1{
+                text-align: center;
+                 color: white;
+                 padding-top: 10px;
+                 padding-bottom: 0px;
+             }
+             #char{
+              padding: 20px 25px;
+               border-radius: 0%;
+             }
+             #word{
+                padding: 20px 25px;
+               border-radius: 0%;
+             }
+             
+         </style>
+
+<body>
+       <div class="box">
+          <h1>  Words and character counter</h1>
+           <div class="main">
+                 <input type="text" id="userinput">  <button onclick="check()"> Check here!</button>
+           </div>
+             <h2 id="output">It has <button id="char"></button> characters and   <button id="word"> </button>  words </h1>  
+ 
+          
+    
+
+       </div> 
+        <script>
+                function check(){
+                    let string=  document.getElementById('userinput').value;
+                      let char= string.length;
+                       console.log(char);
+                       document.getElementById('char').innerHTML= char;
+
+                        string=   string.trim();
+                        let words= string.split(" ");
+                          
+                         console.log(words.length);
+                         let newwords= words.join(" ");
+                         document.getElementById('word').innerHTML= words.length;
+
+                       
+
+                     
+
+} 
+ 
+        </script>
+      
+         
+     
+</body>
+</html>
+
+
